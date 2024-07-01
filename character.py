@@ -1,12 +1,13 @@
 import names
 from random import randrange
+import occupations
 
 class NPC:
     def __init__(self, occupation, unique_attribute, skills):
         self._gender = self.set_gender()
         self._name = self.set_name(self._gender)
         self._age = self.set_age()
-        self._occupation = occupation
+        self._occupation = self.set_occupation()
         self._unique_attribute = unique_attribute
         self._skills = skills
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
@@ -45,6 +46,17 @@ class NPC:
         returns: None (updates self._characteristics_dict)"""
         for key in self._characteristics_dict:
             self._characteristics_dict[key] = randrange(10, 100)
+
+    def set_occupation(self):
+        """Set character occupation
+        random between 0 and 131
+        returns: occupation (STR)"""
+        occupation_index = randrange(0, 132)
+        occupation = occupations.occupations_list[occupation_index]
+
+        return occupation
+    
+
 
 
 
