@@ -3,7 +3,7 @@ from random import randrange
 import occupations
 
 class NPC:
-    def __init__(self, occupation, unique_attribute, skills):
+    def __init__(self, unique_attribute, skills):
         self._gender = self.set_gender()
         self._name = self.set_name(self._gender)
         self._age = self.set_age()
