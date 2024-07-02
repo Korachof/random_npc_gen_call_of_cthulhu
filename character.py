@@ -2,17 +2,20 @@ import names
 from random import randrange
 from occupations import occupations_list
 from attributes import attributes_list
+from skills import skills_dict
 
 class NPC:
-    def __init__(self, unique_attribute, skills):
+    def __init__(self):
         self._gender = self.set_gender()
         self._name = self.set_name(self._gender)
         self._age = self.set_age()
         self._occupation = self.set_occupation()
         self._unique_attribute = self.set_unique_attribute()
-        self._skills = skills
+        self._skills = []
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
-
+        self.set_characteristics()
+        self.set_skills()
+    
     def set_gender(self):
         """Set character gender
         0 = Male, 1 = Female
@@ -33,11 +36,11 @@ class NPC:
 
         return age
 
-    def set_name(self, npc_gender):
+    def set_name(self):
         """Set character name
         parameter: npc_gender (STR)
         returns: name (STR)"""
-        name = names.get_full_name(gender = npc_gender)
+        name = names.get_full_name(gender = self._gender)
 
         return name
 
@@ -66,6 +69,29 @@ class NPC:
 
         return attribute
     
+    def set_skills(self):
+        """Set character skills list
+        Based on character occupation - 1 base skill, 5 random out of 9 others
+        returns: character skill list (LIST)"""
+        skills_list = skills_dict[self._occupation]
+
+        self._skills.append(skills_list[0])
+        skills_list.pop(0)
+        skill_index = randrange(0, len(skills_list))
+        self._skills.append(skills_list[skill_index])
+        skills_list.pop(skill_index)
+        skill_index = randrange(0, len(skills_list))
+        self._skills.append(skills_list[skill_index])
+        skills_list.pop(skill_index)
+        skill_index = randrange(0, len(skills_list))
+        self._skills.append(skills_list[skill_index])
+        skills_list.pop(skill_index)
+        skill_index = randrange(0, len(skills_list))
+        self._skills.append(skills_list[skill_index])
+        skills_list.pop(skill_index)
+        skill_index = randrange(0, len(skills_list))
+        self._skills.append(skills_list[skill_index])
+        skills_list.pop(skill_index)
 
 
 
