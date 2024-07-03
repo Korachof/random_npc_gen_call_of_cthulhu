@@ -7,14 +7,15 @@ from skills import skills_dict
 class NPC:
     def __init__(self):
         self._gender = self.set_gender()
-        self._name = self.set_name(self._gender)
+        self._name = self.set_name()
         self._age = self.set_age()
-        self._occupation = self.set_occupation()
+        self._occupation = "Acrobat"
         self._unique_attribute = self.set_unique_attribute()
-        self._skills = []
+        self._skills = {}
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
         self.set_characteristics()
         self.set_skills()
+        self.set_skills_values()
 
     def get_gender(self):
         """returns: gender (STR)"""
@@ -104,22 +105,41 @@ class NPC:
         Based on character occupation - 1 base skill, 5 random out of 9 others
         returns: character skill list (LIST)"""
         skills_list = skills_dict[self._occupation]
-
-        self._skills.append(skills_list[0])
+        base_skill_values = [60, 60, 50, 50, 50, 40, 40, 40]
+        base_index = randrange(0, 8)
+        self._skills[skills_list[0]] = base_skill_values[base_index]
         skills_list.pop(0)
-        skill_index = randrange(0, len(skills_list))
-        self._skills.append(skills_list[skill_index])
-        skills_list.pop(skill_index)
-        skill_index = randrange(0, len(skills_list))
-        self._skills.append(skills_list[skill_index])
-        skills_list.pop(skill_index)
-        skill_index = randrange(0, len(skills_list))
-        self._skills.append(skills_list[skill_index])
-        skills_list.pop(skill_index)
-        skill_index = randrange(0, len(skills_list))
-        self._skills.append(skills_list[skill_index])
-        skills_list.pop(skill_index)
-        skill_index = randrange(0, len(skills_list))
-        self._skills.append(skills_list[skill_index])
-        skills_list.pop(skill_index)
-        
+        base_skill_values.pop(base_index)
+        for num in range(5):
+            base_index = randrange(0, len(base_skill_values))
+            skill_index = randrange(0, len(skills_list))
+            self._skills[skills_list[skill_index]] = base_skill_values[base_index]
+            skills_list.pop(skill_index)
+            base_skill_values.pop(base_index)
+
+    def set_skills_values(self):
+        skill_points = self._characteristics_dict["Education"] * 2
+        skill_list = []
+        for key in self._skills:
+            skill_list.append(key)
+        while skill_points > 0:
+            if skill_points >= 5:
+                random_skill_index = randrange(0, 5)
+                self._skills[skill_list[random_skill_index]] += 5
+                skill_points -= 5
+            else:
+                random_skill_index = randrange(0, 5)
+                self._skills[skill_list[random_skill_index]] += 1
+                skill_points -= 1
+
+
+acrobat_npc = NPC()
+
+print(acrobat_npc.get_name())
+print(f"Occupation: {acrobat_npc.get_occupation()}     Age: {acrobat_npc.get_age()}     Gender: {acrobat_npc.get_gender()}")
+print("Unique Attribute: " + acrobat_npc.get_unique_attribute())
+for key in acrobat_npc._characteristics_dict:
+    print(f"{key} : {acrobat_npc.get_characteristic_value(key)}")
+for key in acrobat_npc.get_skills():
+    print(f"{key} : {acrobat_npc.get_skills()[key]}")
+

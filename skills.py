@@ -1,4 +1,4 @@
 skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "Law", "Library Use", "Listen", "Persuade", "Occult", "Spot Hidden"], 
-               "Acrobat": ["Jump", "Climb", "Disguise", "Listen", "Occult", "Psychology", "Ride", "Slight of Hand," "Stealth", "Throw"], 
+               "Acrobat": ["Jump", "Climb", "Disguise", "Listen", "Occult", "Psychology", "Ride", "Slight of Hand", "Stealth", "Throw"], 
                "Agency Detective": ["Law", "Bargain", "Charm", "Disguise", "Fast Talk", "Library Use", "Persuade", "Psychology", "Stealth", "Track"],
                "Ambassador": ["Reputation", "Anthropology", "Bargain", "Fast Talk", "History", "Language (Own)", "Language (Other)", "Listen", "Persuade", "Psychology"]}
