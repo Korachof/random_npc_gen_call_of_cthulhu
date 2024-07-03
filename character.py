@@ -118,6 +118,8 @@ class NPC:
             base_skill_values.pop(base_index)
 
     def set_skills_values(self):
+        """sets the education based skill values for each skill
+        returns: None"""
         skill_points = self._characteristics_dict["Education"] * 2
         skill_list = []
         for key in self._skills:
