@@ -14,8 +14,19 @@ class NPC:
         self._skills = {}
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
         self.set_characteristics()
+        self._health = (self._characteristics_dict["Size"] + self._characteristics_dict["Constitution"]) // 10
+        self._sanity = randrange(self._characteristics_dict["Power"] - 5, self._characteristics_dict["Power"] + 6)
+        self._luck = self.set_luck()
         self.set_skills()
         self.set_skills_values()
+
+    def get_health(self):
+        """returns: health (INT)"""
+        return self._health
+    
+    def get_sanity(self):
+        """returns: sanity (INT)"""
+        return self._sanity
 
     def get_gender(self):
         """returns: gender (STR)"""
@@ -68,7 +79,13 @@ class NPC:
         random between 10 and 99
         returns: None (updates self._characteristics_dict)"""
         for key in self._characteristics_dict:
-            self._characteristics_dict[key] = randrange(10, 100)
+            average_check = randrange(0, 3)
+            if average_check == 0 or average_check == 3:
+                self._characteristics_dict[key] = randrange(50, 76)
+            elif average_check == 1:
+                self._characteristics_dict[key] = randrange(26, 51)
+            elif average_check == 2:
+                self._characteristics_dict[key] = randrange(76, 100)
 
     def get_occupation(self):
         """returns: occupation (STR)"""
@@ -134,14 +151,29 @@ class NPC:
                 self._skills[skill_list[random_skill_index]] += 1
                 skill_points -= 1
 
+    def set_luck(self):
+        """Sets luck value based on 3d6 * 5"""
+        d1 = randrange(1, 6)
+        d2 = randrange(1, 6)
+        d3 = randrange(1, 6)
+
+        return (d1 + d2 + d3) * 5
+
+    def get_luck(self):
+        """returns: luck (INT)"""
+        return self._luck
+
 
 acrobat_npc = NPC()
 
-print(acrobat_npc.get_name())
+print(f"Name: {acrobat_npc.get_name()}")
 print(f"Occupation: {acrobat_npc.get_occupation()}     Age: {acrobat_npc.get_age()}     Gender: {acrobat_npc.get_gender()}")
+print(f"Health: {acrobat_npc.get_health()}     Sanity: {acrobat_npc.get_sanity()}     Luck: {acrobat_npc.get_luck()}")
 print("Unique Attribute: " + acrobat_npc.get_unique_attribute())
+print("Characteristics")
 for key in acrobat_npc._characteristics_dict:
     print(f"{key} : {acrobat_npc.get_characteristic_value(key)}")
+print("Skills")
 for key in acrobat_npc.get_skills():
     print(f"{key} : {acrobat_npc.get_skills()[key]}")
 
