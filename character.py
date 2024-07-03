@@ -15,6 +15,10 @@ class NPC:
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
         self.set_characteristics()
         self.set_skills()
+
+    def get_gender(self):
+        """returns: gender (STR)"""
+        return self._gender
     
     def set_gender(self):
         """Set character gender
@@ -29,12 +33,20 @@ class NPC:
 
         return gender
     
+    def get_age(self):
+        """returns: age (INT)"""
+        return self._age
+    
     def set_age(self):
         """Set character age
         returns: age (INT)"""
         age = randrange(18, 100)
 
         return age
+
+    def get_name(self):
+        """returns: name (STR)"""
+        return self._name
 
     def set_name(self):
         """Set character name
@@ -43,6 +55,12 @@ class NPC:
         name = names.get_full_name(gender = self._gender)
 
         return name
+    
+    def get_characteristic_value(self, characteristic):
+        """returns the chosen characteristic value
+        parameter: characteristic (STR)
+        returns: characteristic value (INT)"""
+        return self._characteristics_dict[characteristic]
 
     def set_characteristics(self):
         """Set character characteristics
@@ -50,6 +68,10 @@ class NPC:
         returns: None (updates self._characteristics_dict)"""
         for key in self._characteristics_dict:
             self._characteristics_dict[key] = randrange(10, 100)
+
+    def get_occupation(self):
+        """returns: occupation (STR)"""
+        return self._occupation
 
     def set_occupation(self):
         """Set character occupation
@@ -60,6 +82,10 @@ class NPC:
 
         return occupation
     
+    def get_unique_attribute(self):
+        """returns: unique attribute (STR)"""
+        return self._unique_attribute
+    
     def set_unique_attribute(self):
         """Set character unique attribute
         random based on list length
@@ -68,6 +94,10 @@ class NPC:
         attribute = attributes_list[attribute_index]
 
         return attribute
+    
+    def get_skills(self):
+        """returns: skill list (LIST)"""
+        return self._skills
     
     def set_skills(self):
         """Set character skills list
@@ -92,13 +122,4 @@ class NPC:
         skill_index = randrange(0, len(skills_list))
         self._skills.append(skills_list[skill_index])
         skills_list.pop(skill_index)
-
-
-
-
-
         
-
-
-
-    
