@@ -1,8 +1,10 @@
 import names
 from random import randrange
+from termcolor import colored, cprint
 from occupations import occupations_list
 from attributes import attributes_list
 from skills import skills_dict
+
 
 class NPC:
     def __init__(self):
@@ -166,14 +168,14 @@ class NPC:
 
 acrobat_npc = NPC()
 
-print(f"Name: {acrobat_npc.get_name()}")
-print(f"Occupation: {acrobat_npc.get_occupation()}     Age: {acrobat_npc.get_age()}     Gender: {acrobat_npc.get_gender()}")
-print(f"Health: {acrobat_npc.get_health()}     Sanity: {acrobat_npc.get_sanity()}     Luck: {acrobat_npc.get_luck()}")
-print("Unique Attribute: " + acrobat_npc.get_unique_attribute())
-print("Characteristics")
+print(f"Name: {colored(acrobat_npc.get_name(), 'green')}")
+print(f"Occupation: {colored(acrobat_npc.get_occupation(), 'green')}     Age: {colored(acrobat_npc.get_age(), 'green')}     Gender: {colored(acrobat_npc.get_gender(), 'green')}")
+print(f"Health: {colored(acrobat_npc.get_health(), 'green')}     Sanity: {colored(acrobat_npc.get_sanity(), 'green')}     Luck: {colored(acrobat_npc.get_luck(), 'green')}")
+print("Unique Attribute: " + colored(acrobat_npc.get_unique_attribute(), "green"))
+print(colored("Characteristics", "yellow"))
 for key in acrobat_npc._characteristics_dict:
     print(f"{key} : {acrobat_npc.get_characteristic_value(key)}")
-print("Skills")
+print(colored("Skills", "yellow"))
 for key in acrobat_npc.get_skills():
     print(f"{key} : {acrobat_npc.get_skills()[key]}")
 
