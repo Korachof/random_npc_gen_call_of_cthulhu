@@ -168,14 +168,14 @@ class NPC:
 
 acrobat_npc = NPC()
 
-print(f"Name: {colored(acrobat_npc.get_name(), 'green')}")
-print(f"Occupation: {colored(acrobat_npc.get_occupation(), 'green')}     Age: {colored(acrobat_npc.get_age(), 'green')}     Gender: {colored(acrobat_npc.get_gender(), 'green')}")
-print(f"Health: {colored(acrobat_npc.get_health(), 'green')}     Sanity: {colored(acrobat_npc.get_sanity(), 'green')}     Luck: {colored(acrobat_npc.get_luck(), 'green')}")
-print("Unique Attribute: " + colored(acrobat_npc.get_unique_attribute(), "green"))
-print(colored("Characteristics", "yellow"))
+print(f"Name: {colored(acrobat_npc.get_name(), 'light_green')}")
+print(f"Occupation: {colored(acrobat_npc.get_occupation(), 'light_green')}     Age: {colored(acrobat_npc.get_age(), 'light_green')}     Gender: {colored(acrobat_npc.get_gender(), 'light_green')}")
+print(f"Health: {colored(acrobat_npc.get_health(), 'light_green')}     Sanity: {colored(acrobat_npc.get_sanity(), 'light_green')}     Luck: {colored(acrobat_npc.get_luck(), 'light_green')}")
+print("Unique Attribute: " + colored(acrobat_npc.get_unique_attribute(), "light_green"))
+print(colored("Characteristics", "light_yellow"))
 for key in acrobat_npc._characteristics_dict:
-    print(f"{key} : {acrobat_npc.get_characteristic_value(key)}")
+    print(f"{key} : {colored(acrobat_npc.get_characteristic_value(key), 'light_green')}")
 print(colored("Skills", "yellow"))
 for key in acrobat_npc.get_skills():
-    print(f"{key} : {acrobat_npc.get_skills()[key]}")
+    print(f"{key} : {colored(acrobat_npc.get_skills()[key], 'light_green')}")
 
