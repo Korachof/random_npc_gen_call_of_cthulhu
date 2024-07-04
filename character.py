@@ -11,13 +11,14 @@ class NPC:
         self._gender = self.set_gender()
         self._name = self.set_name()
         self._age = self.set_age()
-        self._occupation = "Acrobat"
+        self._occupation = "Bank Robber"
         self._unique_attribute = self.set_unique_attribute()
         self._skills = {}
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
         self.set_characteristics()
         self._health = (self._characteristics_dict["Size"] + self._characteristics_dict["Constitution"]) // 10
         self._sanity = randrange(self._characteristics_dict["Power"] - 5, self._characteristics_dict["Power"] + 6)
+        self._dodge = self._characteristics_dict["Dexterity"] // 2
         self._luck = self.set_luck()
         self.set_skills()
         self.set_skills_values()
@@ -29,6 +30,10 @@ class NPC:
     def get_sanity(self):
         """returns: sanity (INT)"""
         return self._sanity
+    
+    def get_dodge(self):
+        """returns: dodge (INT)"""
+        return self._dodge
 
     def get_gender(self):
         """returns: gender (STR)"""
@@ -66,7 +71,7 @@ class NPC:
         """Set character name
         parameter: npc_gender (STR)
         returns: name (STR)"""
-        name = names.get_full_name(gender = self._gender)
+        name = names.get_full_name(gender=self._gender.lower())
 
         return name
     
@@ -146,12 +151,14 @@ class NPC:
         while skill_points > 0:
             if skill_points >= 5:
                 random_skill_index = randrange(0, 5)
-                self._skills[skill_list[random_skill_index]] += 5
-                skill_points -= 5
+                if self._skills[skill_list[random_skill_index]] < 95:
+                    self._skills[skill_list[random_skill_index]] += 5
+                    skill_points -= 5
             else:
                 random_skill_index = randrange(0, 5)
-                self._skills[skill_list[random_skill_index]] += 1
-                skill_points -= 1
+                if self._skills[skill_list[random_skill_index]] < 100:
+                    self._skills[skill_list[random_skill_index]] += 1
+                    skill_points -= 1
 
     def set_luck(self):
         """Sets luck value based on 3d6 * 5"""
