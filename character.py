@@ -19,6 +19,7 @@ class NPC:
         self._health = (self._characteristics_dict["Size"] + self._characteristics_dict["Constitution"]) // 10
         self._sanity = randrange(self._characteristics_dict["Power"] - 5, self._characteristics_dict["Power"] + 6)
         self._dodge = self._characteristics_dict["Dexterity"] // 2
+        self._brawl = self.set_brawl()
         self._luck = self.set_luck()
         self.set_skills()
         self.set_skills_values()
@@ -34,6 +35,27 @@ class NPC:
     def get_dodge(self):
         """returns: dodge (INT)"""
         return self._dodge
+
+    def set_brawl(self):
+        """Set character brawl skill
+        50% being str * dex // 2, 15% lower, 35% higher
+        returns brawl (INT)"""
+        starting_brawl = (self._characteristics_dict["Dexterity"] * self._characteristics_dict["Strength"]) // 100
+        avg_check = randrange(0, 100)
+
+        if avg_check < 51:
+            return starting_brawl
+        elif avg_check < 76:
+            return starting_brawl - randrange(1, 21)
+        elif avg_check < 100:
+            brawl_increase = starting_brawl + randrange(1, 21)
+            if brawl_increase > 99:
+                brawl_increase = 99
+            return brawl_increase
+
+    def get_brawl(self):
+        """returns: brawl (INT)"""
+        return self._brawl
 
     def get_gender(self):
         """returns: gender (STR)"""
@@ -144,7 +166,7 @@ class NPC:
     def set_skills_values(self):
         """sets the education based skill values for each skill
         returns: None"""
-        skill_points = self._characteristics_dict["Education"] * 2
+        skill_points = self._characteristics_dict["Education"]
         skill_list = []
         for key in self._skills:
             skill_list.append(key)
@@ -171,6 +193,22 @@ class NPC:
     def get_luck(self):
         """returns: luck (INT)"""
         return self._luck
+    
+    def save_npc_txt_file(self):
+        f = open(f"{self._name}-{self._occupation}-CoC-NPC.txt", "a")
+        f.write(f"Name: {acrobat_npc.get_name()}\n")
+        f.write(f"Occupation: {acrobat_npc.get_occupation()}     Age: {acrobat_npc.get_age()}     Gender: {acrobat_npc.get_gender()}\n")
+        f.write(f"Health: {acrobat_npc.get_health()}     Sanity: {acrobat_npc.get_sanity()}     Luck: {acrobat_npc.get_luck()}\n")
+        f.write(f"Unique Attribute: {acrobat_npc.get_unique_attribute()}\n")
+        f.write("Characteristics\n")
+        for key in acrobat_npc._characteristics_dict:
+            f.write(f"{key} : {acrobat_npc.get_characteristic_value(key)}\n")
+        f.write("Skills\n")
+        f.write(f"Dodge: {acrobat_npc.get_dodge()}\n")
+        f.write(f"Fighting (Brawl): {acrobat_npc.get_brawl()}\n")
+        for key in acrobat_npc.get_skills():
+            f.write(f"{key} : {acrobat_npc.get_skills()[key]}\n")
+        f.close()
 
 
 acrobat_npc = NPC()
@@ -183,6 +221,10 @@ print(colored("Characteristics", "light_yellow"))
 for key in acrobat_npc._characteristics_dict:
     print(f"{key} : {colored(acrobat_npc.get_characteristic_value(key), 'light_green')}")
 print(colored("Skills", "yellow"))
+print(f"Dodge: {colored(acrobat_npc.get_dodge(), 'light_green')}")
+print(f"Fighting (Brawl): {colored(acrobat_npc.get_brawl(), 'light_green')}")
 for key in acrobat_npc.get_skills():
     print(f"{key} : {colored(acrobat_npc.get_skills()[key], 'light_green')}")
+
+acrobat_npc.save_npc_txt_file()
 
