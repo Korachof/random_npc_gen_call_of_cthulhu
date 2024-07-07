@@ -150,6 +150,7 @@ class NPC:
         """Set character skills list
         Based on character occupation - 1 base skill, 5 random out of 9 others
         returns: character skill list (LIST)"""
+        temp_skills_pop_list = []
         skills_list = skills_dict[self._occupation]
         base_skill_values = [60, 60, 50, 50, 50, 40, 40, 40]
         base_index = randrange(0, 8)
@@ -160,8 +161,14 @@ class NPC:
             base_index = randrange(0, len(base_skill_values))
             skill_index = randrange(0, len(skills_list))
             self._skills[skills_list[skill_index]] = base_skill_values[base_index]
+            popped_skill = skills_list[skill_index]
+            temp_skills_pop_list.append(popped_skill)
             skills_list.pop(skill_index)
             base_skill_values.pop(base_index)
+        
+        for skill in temp_skills_pop_list:
+            skills_list.append(skill)
+            
 
     def set_skills_values(self):
         """sets the education based skill values for each skill
@@ -194,37 +201,50 @@ class NPC:
         """returns: luck (INT)"""
         return self._luck
     
+    def print_npc(self):
+        print(f"Name: {colored(self.get_name(), 'light_green')}")
+        print(f"Occupation: {colored(self.get_occupation(), 'light_green')}     Age: {colored(self.get_age(), 'light_green')}     Gender: {colored(self.get_gender(), 'light_green')}")
+        print(f"Health: {colored(self.get_health(), 'light_green')}     Sanity: {colored(self.get_sanity(), 'light_green')}     Luck: {colored(self.get_luck(), 'light_green')}")
+        print("Unique Attribute: " + colored(self.get_unique_attribute(), "light_green"))
+        print(colored("Characteristics", "light_yellow"))
+        for key in self._characteristics_dict:
+            print(f"{key} : {colored(self.get_characteristic_value(key), 'light_green')}")
+        print(colored("Skills", "yellow"))
+        print(f"Dodge: {colored(self.get_dodge(), 'light_green')}")
+        print(f"Fighting (Brawl): {colored(self.get_brawl(), 'light_green')}")
+        for key in self.get_skills():
+            print(f"{key} : {colored(self.get_skills()[key], 'light_green')}")
+    
     def save_npc_txt_file(self):
         f = open(f"{self._name}-{self._occupation}-CoC-NPC.txt", "a")
-        f.write(f"Name: {acrobat_npc.get_name()}\n")
-        f.write(f"Occupation: {acrobat_npc.get_occupation()}     Age: {acrobat_npc.get_age()}     Gender: {acrobat_npc.get_gender()}\n")
-        f.write(f"Health: {acrobat_npc.get_health()}     Sanity: {acrobat_npc.get_sanity()}     Luck: {acrobat_npc.get_luck()}\n")
-        f.write(f"Unique Attribute: {acrobat_npc.get_unique_attribute()}\n")
+        f.write(f"Name: {self.get_name()}\n")
+        f.write(f"Occupation: {self.get_occupation()}     Age: {self.get_age()}     Gender: {self.get_gender()}\n")
+        f.write(f"Health: {self.get_health()}     Sanity: {self.get_sanity()}     Luck: {self.get_luck()}\n")
+        f.write(f"Unique Attribute: {self.get_unique_attribute()}\n")
         f.write("Characteristics\n")
-        for key in acrobat_npc._characteristics_dict:
-            f.write(f"{key} : {acrobat_npc.get_characteristic_value(key)}\n")
+        for key in self._characteristics_dict:
+            f.write(f"{key} : {self.get_characteristic_value(key)}\n")
         f.write("Skills\n")
-        f.write(f"Dodge: {acrobat_npc.get_dodge()}\n")
-        f.write(f"Fighting (Brawl): {acrobat_npc.get_brawl()}\n")
-        for key in acrobat_npc.get_skills():
-            f.write(f"{key} : {acrobat_npc.get_skills()[key]}\n")
+        f.write(f"Dodge: {self.get_dodge()}\n")
+        f.write(f"Fighting (Brawl): {self.get_brawl()}\n")
+        for key in self.get_skills():
+            f.write(f"{key} : {self.get_skills()[key]}\n")
         f.close()
+        print(f"Saved {self._name} as {self._name}-{self._occupation}-CoC-NPC.txt")
 
 
-acrobat_npc = NPC()
-
-print(f"Name: {colored(acrobat_npc.get_name(), 'light_green')}")
-print(f"Occupation: {colored(acrobat_npc.get_occupation(), 'light_green')}     Age: {colored(acrobat_npc.get_age(), 'light_green')}     Gender: {colored(acrobat_npc.get_gender(), 'light_green')}")
-print(f"Health: {colored(acrobat_npc.get_health(), 'light_green')}     Sanity: {colored(acrobat_npc.get_sanity(), 'light_green')}     Luck: {colored(acrobat_npc.get_luck(), 'light_green')}")
-print("Unique Attribute: " + colored(acrobat_npc.get_unique_attribute(), "light_green"))
+""" print(f"Name: {colored(self.get_name(), 'light_green')}")
+print(f"Occupation: {colored(self.get_occupation(), 'light_green')}     Age: {colored(self.get_age(), 'light_green')}     Gender: {colored(self.get_gender(), 'light_green')}")
+print(f"Health: {colored(self.get_health(), 'light_green')}     Sanity: {colored(self.get_sanity(), 'light_green')}     Luck: {colored(self.get_luck(), 'light_green')}")
+print("Unique Attribute: " + colored(self.get_unique_attribute(), "light_green"))
 print(colored("Characteristics", "light_yellow"))
-for key in acrobat_npc._characteristics_dict:
-    print(f"{key} : {colored(acrobat_npc.get_characteristic_value(key), 'light_green')}")
+for key in self._characteristics_dict:
+    print(f"{key} : {colored(self.get_characteristic_value(key), 'light_green')}")
 print(colored("Skills", "yellow"))
-print(f"Dodge: {colored(acrobat_npc.get_dodge(), 'light_green')}")
-print(f"Fighting (Brawl): {colored(acrobat_npc.get_brawl(), 'light_green')}")
-for key in acrobat_npc.get_skills():
-    print(f"{key} : {colored(acrobat_npc.get_skills()[key], 'light_green')}")
+print(f"Dodge: {colored(self.get_dodge(), 'light_green')}")
+print(f"Fighting (Brawl): {colored(self.get_brawl(), 'light_green')}")
+for key in self.get_skills():
+    print(f"{key} : {colored(self.get_skills()[key], 'light_green')}")
 
-acrobat_npc.save_npc_txt_file()
+self.save_npc_txt_file() """
 
