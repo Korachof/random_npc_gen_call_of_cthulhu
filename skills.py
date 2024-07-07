@@ -10,9 +10,13 @@ skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "L
                "Artist": ["Art/Craft", "Charm", "Disguise", "Fast Talk", "History", "Library Use", "Lore (Any)", "Occult", "Persuade", "Photography", "Psychology"],
                "Author": ["Art/Craft (Writing)", "Charm", "Fast Talk", "History", "Language (Own)", "Language (Other)", "Library Use", "Natural World", "Psychology", "Occult", "Science (Choose)"],
                "Bank Robber": ["Drive Auto", "Appraise", "Electrical Repair", "Electronics", "Fast Talk", "Firearms", "Intimidate", "Mechanical Repair", "Persuade", "Spot Hidden", "Stealth"],
-               "Barber": [],
-               "Bartender": [],
-               "Bible Salesman": []}
+               "Barber": ["Art/Craft (Hairstyling)", "Accounting", "Charm", "Disguise", "Drive Auto", "Fast Talk", "First Aid", "Persuade", "Psychology", "Psychoanalysis", "Reputation"],
+               "Bartender": ["Art/Craft (Mixology)", "Accounting", "Charm", "Electrical Repair", "Fast Talk", "First Aid", "Firearms (Shotgun/Rifle)", "Persuade", "Psychology", "Science (Chemistry)", "Sleight of Hand"],
+               "Bible Salesman": ["Persuade", "Charm", "Fast Talk", "History", "Intimidate", "Language (Own)", "Library Use", "Navigate", "Occult", "Psychology", "Stealth"],
+               "Big Game Hunter": [],
+               "Book Dealer": [],
+               "Bookie": [],
+               "Boss": []}
 
 
 if __name__ == "__main__": 
@@ -21,7 +25,7 @@ if __name__ == "__main__":
         for key in skills_dict:
             if len(skills_dict[key]) != SKILLS_NUM:
                 count += 1
-                print(f"{key} does not have {SKILLS_NUM} skills")
+                print(f"{key} only has {len(skills_dict[key])}/{SKILLS_NUM} skills")
 
         if count == 0:
             print(f"All occupations have {SKILLS_NUM} skills")
