@@ -231,20 +231,5 @@ class NPC:
             f.write(f"{key} : {self.get_skills()[key]}\n")
         f.close()
         print(f"Saved {self._name} as {self._name}-{self._occupation}-CoC-NPC.txt")
-
-
-""" print(f"Name: {colored(self.get_name(), 'light_green')}")
-print(f"Occupation: {colored(self.get_occupation(), 'light_green')}     Age: {colored(self.get_age(), 'light_green')}     Gender: {colored(self.get_gender(), 'light_green')}")
-print(f"Health: {colored(self.get_health(), 'light_green')}     Sanity: {colored(self.get_sanity(), 'light_green')}     Luck: {colored(self.get_luck(), 'light_green')}")
-print("Unique Attribute: " + colored(self.get_unique_attribute(), "light_green"))
-print(colored("Characteristics", "light_yellow"))
-for key in self._characteristics_dict:
-    print(f"{key} : {colored(self.get_characteristic_value(key), 'light_green')}")
-print(colored("Skills", "yellow"))
-print(f"Dodge: {colored(self.get_dodge(), 'light_green')}")
-print(f"Fighting (Brawl): {colored(self.get_brawl(), 'light_green')}")
-for key in self.get_skills():
-    print(f"{key} : {colored(self.get_skills()[key], 'light_green')}")
-
-self.save_npc_txt_file() """
+        
 

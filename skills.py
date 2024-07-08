@@ -13,10 +13,18 @@ skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "L
                "Barber": ["Art/Craft (Hairstyling)", "Accounting", "Charm", "Disguise", "Drive Auto", "Fast Talk", "First Aid", "Persuade", "Psychology", "Psychoanalysis", "Reputation"],
                "Bartender": ["Art/Craft (Mixology)", "Accounting", "Charm", "Electrical Repair", "Fast Talk", "First Aid", "Firearms (Shotgun/Rifle)", "Persuade", "Psychology", "Science (Chemistry)", "Sleight of Hand"],
                "Bible Salesman": ["Persuade", "Charm", "Fast Talk", "History", "Intimidate", "Language (Own)", "Library Use", "Navigate", "Occult", "Psychology", "Stealth"],
-               "Big Game Hunter": [],
-               "Book Dealer": [],
-               "Bookie": [],
-               "Boss": []}
+               "Big Game Hunter": ["Firearms (Shotgun/Rifle)", "Climb", "Drive Auto", "First Aid", "Jump", "Listen", "Natural World", "Navigate", "Stealth", "Survival", "Track"],
+               "Book Dealer": ["Library Use", "Accounting", "Appraise", "Drive Auto", "History", "Language (Own)", "Language (Other)", "Listen", "Navigate", "Occult", "Persuade"],
+               "Bookie": ["Accounting", "Appraise", "Fast Talk", "Firearms (Handgun)", "Intimidate", "Law", "Persuade", "Psychology", "Reputation", "Sleight of Hand", "Track"],
+               "Boss": ["Reputation", "Accounting", "Drive Auto", "Electrical Repair", "Fast Talk", "First Aid", "Intimidate", "Law", "Mechanical Repair", "Persuade", "Psychology"],
+               "Bounty Hunter": ["Track", "Accounting", "Climb", "Drive Auto", "Electrical Repair", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "Jump", "Persuade", "Survival", "Stealth"],
+               "Boxer": ["Fighting (Punch)", "Charm", "Fast Talk", "First Aid", "History", "Intimidate", "Listen", "Sleight of Hand", "Spot Hidden", "Swim", "Throw"],
+               "Burglar": ["Stealth", "Appraise", "Climb", "Disgiuse", "Electrical Repair", "Firearms (Handgun)", "Jump", "Listen", "Locksmith", "Spot Hidden:", "Stealth"],
+               "Bus Driver": ["Drive Auto", "Electrical Repair", "History", "Intimidate", "Law", "Listen", "Mechanical Repair", "Navigate", "Occult", "Persuade", "Psychology"],
+               "Catholic Priest": [],
+               "Clergyman": [],
+               "Clerk": [],
+               "Cocktail Waitress": []}
 
 
 if __name__ == "__main__": 
