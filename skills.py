@@ -92,7 +92,27 @@ skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "L
                "Plastic Surgeon": ["Medicine", "Accounting", "First Aid", "Language (Other)", "Library USe", "Persuade", "Psychology", "Reputation", "Science (Biology)", "Science (Chemistry)", "Sleight of Hand"],
                "Police Detective": ["Track", "Disguise", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "Law", "Listen", "Persuade", "Psychology", "Spot Hidden"],
                "Policeman": ["Law", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "Intimidate", "Listen", "Occult", "Persuade", "Psychology", "Track"],
-               "Practising Attorney": ["Law", "Accounting", "Fast Talk", "Intimidate", "Language (Own)", "Language (Other)", "Law", "'Library Use", "Persuade", "Psychology", "Reputation"]}
+               "Practising Attorney": ["Law", "Accounting", "Fast Talk", "Intimidate", "Language (Own)", "Language (Other)", "Law", "'Library Use", "Persuade", "Psychology", "Reputation"],
+               "Preacher": ["Accounting", "Fast Talk", "History", "Intimidate", "Language (Own)", "Library Use", "Occult", "Persuade", "Psychology", "Reputation", "Stealth"],
+               "Private Investigator": ["Track", "Climb", "Disguise", "Drive Auto", "Fast Talk", "Jump", "Law", "Library Use", "Persuade", "Photography", "Stealth"], 
+               "Professional Athlete": ["Art/Craft (Sport)", "Charm", "Disguise", "Fast Talk", "First Aid", "Jump", "Listen", "Psychology", "Spot Hidden", "Throw", "Swim"], 
+               "Professor/Teacher": ["Persuade", "Charm", "Fast Talk", "History", "Intimidate", "Language (Own)", "Language (Other)", "Library Use", "Natural World", "Reputation", "Science (Any)"],
+               "Programmer": ["Electronics", "Accounting", "Electrical Repair", "Fast Talk", "First Aid", "Library Use", "Language (Other)", "Mechanical Repair", "Occult", "Sleight of Hand", "Spot Hidden"], 
+               "Prosecuting Attorney": ["Persuade", "Fast Talk", "History", "Intimidate", "Language (Own)", "Language (Other)", "Law", "Library Use", "Occult", "Psychology", "Reputation"], 
+               "Protestant Minister": ["Persuade", "Accounting", "Fast Talk", "Firearms (Handgun)", "Intimidate", "History", "Language (Own)", "Library Use", "Occult", "Psychology", "Reputation"], 
+               "Psychologist": ["Psychology", "Accounting", "Charm", "Fast Talk", "Intimidate", "First Aid", "Library Use", "Medicine", "Persuade", "Psychoanalysis", "Science (Chemistry)"],
+               "Punk": ["Intimidate", "Fast Talk", "Firearms (Handgun)", "Listen", "Occult", "Persuade", "Psychology", "Spot Hidden", "Survival", "Throw", "Track"],
+               "Rabbi": ["Language (Hebrew)", "Fast Talk", "History", "Intimidate", "Language (English)", "Language (Other)", "Library Use", "Occult", "Persuade", "Psychology", "Reputation"],
+               "Racecar Driver": ["Drive Auto", "Charm", "Fast Talk", "First Aid", "Electrical Repair", "History", "Listen", "Mechanical Repair", "Pilot (Boat)", "Psychology", "Spot Hidden"],
+               "Ranch Hand/Cowboy": ["Natural World", "Accounting", "Drive Auto", "Firearms (Rifle/Shotgun)", "First Aid", "Jump", "Listen", "Medicine (Veterinary)", "Operate Heavy Machinery", "Reputation", "Ride"],
+               "Reporter": ["Fast Talk", "Charm", "Climb", "Disguise", "Jump", "Listen", "Persuade", "Psychology",  "Reputation", "Stealth", "Spot Hidden"],
+               "Researcher": ["Library Use", "Anthropology", "Archaeology", "History", "Language (Own)", "Language (Other)", "Occult", "Psychology", "Reputation", "Science (Any)", "Spot Hidden"],
+               "Sailor": ["Climb", "Artillery", "Electrical Repair", "Firearms (Handgun)", "Firearms (Rifle/Shotgun", "First Aid", "Jump", "Mechanical Repair", "Navigate", "Operate Heavy Machinery", "Swim"],
+               "Salesman": ["Fast Talk", "Accounting", "Appraise", "Charm", "Drive Auto", "Firearms (Handgun)", "Language (Own)", "Occult", "Persuade", "Psychology", "Reputation"],
+               "Secretary": ["Accounting", "Charm", "Drive Auto", "Fast Talk", "First Aid", "Language (Own)", "Language (Other)", "Library Use", "Persuade", "Psychology", "Spot Hidden"],
+               "Shifty Accountant/Lawyer": ["Fast Talk", "Accounting", "Charm", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Law", "Occult", "Persuade", "Psychology", "Reputation"],
+               "Small Business Owner": ["Accounting", "Animal Handling", "Charm", "Fast Talk", "Electrical Repair", "Fast Talk", "Listen", "Mechanical Repair", "Persuade", "Psychology", "Reputation"],
+               "Smuggler": ["Stealth", "Charm", "Fast Talk", "Firearms (Handgun)", "Language (Other)", "Listen", "Navigate", "Persuade", "Pilot (Aircraft/Boat)", "Psychology", "Spot Hidden"]}
 
 
 if __name__ == "__main__": 
