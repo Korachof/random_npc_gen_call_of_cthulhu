@@ -72,7 +72,27 @@ skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "L
                "Medical Technician": ["Medicine", "Electrical Repair", "First Aid", "Library Use", "Listen", "Mechanical Repair", "Occult", "Photography", "Science (Biology)", "Science (Chemistry)", "Spot Hidden"],
                "Mental Hospital Attendant": ["Psychology", "Accounting", "Charm", "Fast Talk", "First Aid", "History", "Intimidate", "Listen", "Persuade", "Stealth", "Track"],
                "Mercenary": ["Firearms (Rifle/Shotgun)", "Climb", "Firearms (Handgun)", "Jump", "Navigate", "Operate Heavy Machinery", "Pilot (Aircraft)", "Stealth", "Survival", "Swim", "Track"], 
-               "Military Officer": ["Reputation", "Climb", "Fast Talk", "Intimiate", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "First Aid", "Intimidate", "Navigate", "Persuade", "Psychology"]}
+               "Military Officer": ["Reputation", "Climb", "Fast Talk", "Intimiate", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "First Aid", "Intimidate", "Navigate", "Persuade", "Psychology"],
+               "Miner": ["Operate Heavy Machinery", "Appraise", "Climb", "First Aid", "Intimidate", "Jump", "Listen", "Natural World", "Science (Chemistry)", "Science (Geology)", "Spot Hidden"], 
+               "Missionary": ["Fast Talk", "Anthropology", "Charm", "Drive Auto", "Language (Own)", "Language (Other)", "Library Use", "Occult", "Persuade", "Psychology", "Track"], 
+               "Mountain Climber": ["Climb", "First Aid", "Jump", "Listen", "Natural World", "Navigate", "Photography", "Science (Geology)", "Throw", "Track", "Spot Hidden"], 
+               "Museum Curator": ["History", "Accounting", "Appraise", "Fast Talk", "Language (Own)", "Language (Other)", "Law", "Library Use", "Occult", "Persuade", "Reputation"],
+               "Musician": ["Art/Craft (Instrument)", "Accounting", "Charm", "Disguise", "Fast Talk", "Listen", "Persuade", "Psychology",  "Read Lips", "Reputation", "Sleight of Hand"], 
+               "News Chopper Pilot": ["Pilot (Helicopter)", "Climb", "Drive Auto", "First Aid", "Jump", "Language (Own)", "Listen", "Mechanical Repair", "Persuade", "Science (Meteorology)", "Spot Hidden"], 
+               "Nurse": ["First Aid", "Charm", "Fast Talk", "Intimidate", "Library Use", "Medicine", "Persuade", "Psychology", "Reputation", "Science (Biology)", "Stealth"], 
+               "Occultist": ["Occult", "Anthropology", "Cthulhu Mythos", "Firearms (Handgun)", "History", "Intimidate", "Language (Own)", "Language (Other)", "Library Use", "Stealth", "Survival"],
+               "Painter/Sculptor": ["Art/Craft (Specialization)", "Appraise", "History", "Language (Other)", "Library Use", "Natural World", "Occult", "Persuade", "Photography", "Psychology", "Sleight of Hand"], 
+               "Parapsychologist": ["Psychoanalysis", "Anthropology", "Fast Talk", "First Aid", "Hypnosis", "Library Use", "Medicine", "Occult", "Persuade", "Photography", "Psychology"], 
+               "Pharmacist": ["Medicine", "Accounting", "First Aid", "Language (Own)", "Language (Other)", "Library Use", "Persuade", "Psychology", "Reputation", "Science (Biology)", "Science (Chemistry)"],
+               "Photographer": ["Photography", "Accounting", "History", "Listen", "Natural World", "Persuade", "Psychology", "Read Lips", "Science (Chemistry)", "Science (Physics)", "Spot Hidden"],
+               "Photojournalist": ["Photography", "Charm", "Climb", "Fast Talk", "Jump", "Langauge (Other)", "Persuade", "Psychology", "Spot Hidden", "Survival", "Track"],
+               "Physician": ["Medicine", "Charm", "First Aid", "Library Use", "Medicine", "Persuade", "Psychoanalysis", "Psychology", "Reputation", "Science (Biology)", "Science (Chemistry)"],
+               "Pick Pocket": ["Sleight of Hand", "Charm", "Disguise", "Fast Talk", "Firearms (Handgun)", "Listen", "Locksmith", "Psychology", "Spot Hidden", "Stealth", "Track"],
+               "Pilot": ["Pilot (Specialization)", "Charm", "Electrical Repair", "Electronics", "Firearms (Handgun)", "Mechanical Repair", "Navigate", "Operate Heavy Machinery", "Science (Astronomy)", "Science (Physics)", "Survival"],
+               "Plastic Surgeon": ["Medicine", "Accounting", "First Aid", "Language (Other)", "Library USe", "Persuade", "Psychology", "Reputation", "Science (Biology)", "Science (Chemistry)", "Sleight of Hand"],
+               "Police Detective": ["Track", "Disguise", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "Law", "Listen", "Persuade", "Psychology", "Spot Hidden"],
+               "Policeman": ["Law", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "Intimidate", "Listen", "Occult", "Persuade", "Psychology", "Track"],
+               "Practising Attorney": ["Law", "Accounting", "Fast Talk", "Intimidate", "Language (Own)", "Language (Other)", "Law", "'Library Use", "Persuade", "Psychology", "Reputation"]}
 
 
 if __name__ == "__main__": 
