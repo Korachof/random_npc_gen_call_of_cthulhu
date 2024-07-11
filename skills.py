@@ -112,7 +112,27 @@ skills_dict = {"Accountant": ["Accounting", "Appraise", "Charm", "Fast Talk", "L
                "Secretary": ["Accounting", "Charm", "Drive Auto", "Fast Talk", "First Aid", "Language (Own)", "Language (Other)", "Library Use", "Persuade", "Psychology", "Spot Hidden"],
                "Shifty Accountant/Lawyer": ["Fast Talk", "Accounting", "Charm", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Law", "Occult", "Persuade", "Psychology", "Reputation"],
                "Small Business Owner": ["Accounting", "Animal Handling", "Charm", "Fast Talk", "Electrical Repair", "Fast Talk", "Listen", "Mechanical Repair", "Persuade", "Psychology", "Reputation"],
-               "Smuggler": ["Stealth", "Charm", "Fast Talk", "Firearms (Handgun)", "Language (Other)", "Listen", "Navigate", "Persuade", "Pilot (Aircraft/Boat)", "Psychology", "Spot Hidden"]}
+               "Smuggler": ["Stealth", "Charm", "Fast Talk", "Firearms (Handgun)", "Language (Other)", "Listen", "Navigate", "Persuade", "Pilot (Aircraft/Boat)", "Psychology", "Spot Hidden"],
+               "Soldier/Marine": ["Firearms (Rifle/Shotgun)", "Artillery", "Drive Auto", "Electrical Repair", "Firearms (Handgun)", "First Aid", "Mechanical Repair", "Medicine", "Operate Heavy Machinery", "Spot Hidden", "Survival"],
+               "Spy": ["Stealth", "Charm", "Demolitions", "Disguise", "Fast Talk", "Firearms (Handgun)", "Listen", "Language (Other)", "Persuade", "Psychology", "Spot Hidden"], 
+               "Stage Actor": ["Art/Craft (Acting)", "Charm", "Disguise", "Fast Talk", "History", "Language (Own)", "Language (Other)", "Library Use", "Listen", "Persuade", "Psychology"], 
+               "Stage Hand": ["Art/Craft (Theater)", "Art/Craft (Acting)", "Charm", "Disguise", "Fast Talk", "Electrical Repair", "Mechanical Repair", "Persuade", "Psychology", "Sleight of Hand", "Stealth"],
+               "Stock Broker": ["Appraise", "Accounting", "Electronics", "Fast Talk", "History", "Language (Own)", "Library Use", "Occult", "Persuade", "Psychology", "Reputation"], 
+               "Student/Intern": ["Library Use", "Accounting", "Anthropology", "Charm", "Fast Talk", "History", "Language (Own)", "Language (Other)", "Listen", "Psychology", "Science (Any)"], 
+               "Stunt Man": ["Disguise", "Climb", "Drive Auto", "Elecrical Repair", "First Aid", "Jump", "Mechanical Repair", "Pilot (Aircraft/Boat)", "Ride", "Swim", "Throw"], 
+               "Surveyor": ["Natural World", "Accounting", "First Aid", "History", "Law", "Library Use", "Listen", "Navigate", "Spot Hidden", "Survival", "Track"],
+               "Swimmer/Diver": ["Swim", "Appraise", "Demolitions", "Electrical Repair", "Firearms (Rifle/Shotgun)", "Mechanical Repair", "Navigate", "Persuade", "Pilot (Boat)", "Spot Hidden", "Track"],
+               "Talent Agent": ["Psychology", "Accounting", "Appraise", "Charm", "Fast Talk", "Law", "Listen", "Persuade", "Psychology", "Reputation", "Spot Hidden"],
+               "Taxi Driver": ["Drive Auto", "Accounting", "Electrical Repair", "Fast Talk", "Firearms (Handgun)", "History", "Language (Own)", "Mechanical Repair", "Navigate", "Persuade", "Psychology"],
+               "Telephone Operator": ["Listen", "Accounting", "Charm", "Electrical Repair", "Fast Talk", "Language (Own)", "Language (Other)", "Library Use", "Occult", "Persuade", "Psychology"],
+               "Tennis Pro": ["Art/Craft (Tennis)", "Charm", "Disguise", "Fast Talk", "Intimidate", "Jump", "Occult", "Persuade", "Psychology", "Reputation", "Spot Hidden"],
+               "Tribal Member": ["Natural World", "First Aid", "Language (Own)", "Language (Other)", "Listen", "Medicine", "Occult", "Spot Hidden", "Swim", "Throw", "Track"],
+               "Undertaker": ["Science (Biology)", "Accounting", "Fast Talk", "'First Aid", "History", "Intimidate", "Library Use", "Persuade", "Psychology", "Reputation", "Stealth"],
+               "Uniformed Police Officer": ["Law", "Drive Auto", "Fast Talk", "Firearms (Handgun)", "Firearms (Rifle/Shotgun)", "First Aid", "Intimidate", "Occult", "Persuade", "Psychology", "Track"],
+               "Union Activist": ["Psychology", "Accounting", "Fast Talk", "Firearms (Handgun)", "Language (Own)", "Language (Other)", "Law", "Mechanical Repair", "Operate Heavy Machinery", "Persuade", "Psychology"],
+               "Writer": ["Art/Craft (Writing)", "Charm", "Fast Talk", "History", "Language (Own)", "Language (Other)", "Listen", "Natural World", "Occult", "Persuade", "Psychology"],
+               "Wrestler": ["Fighting (Grapple)", "Charm", "Disguise", "Fast Talk", "First Aid", "History", "Intimidate", "Listen", "Sleight of Hand", "Spot Hidden", "Throw"],
+               "Zookeeper": ["Animal Handling", "Accounting", "First Aid", "Charm", "Firearms (Rifle/Shotgun)", "Library Use", "Natural World", "Medicine (Veterinary)", "Psychology", "Science (Biology)", "Survival"]}
 
 
 if __name__ == "__main__": 

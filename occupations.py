@@ -28,6 +28,6 @@ occupations_list = ["Accountant", "Acrobat", "Agency Detective", "Ambassador",
  "Secretary", "Shifty Accountant/Lawyer", "Small Business Owner", "Smuggler",
  "Soldier/Marine", "Spy", "Stage Actor", "Stage Hand",
  "Stock Broker", "Student/Intern", "Stunt Man", "Surveyor",
- "Swimmer/Diver", "Talent Agent", "Taxi Driver", "Telephone Operaator",
+ "Swimmer/Diver", "Talent Agent", "Taxi Driver", "Telephone Operator",
  "Tennis Pro", "Tribal Member", "Undertaker", "Uniformed Police Officer",
  "Union Activist", "Writer", "Wrestler", "Zookeeper"]
