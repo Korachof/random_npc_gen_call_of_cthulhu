@@ -11,7 +11,7 @@ class NPC:
         self._gender = self.set_gender()
         self._name = self.set_name()
         self._age = self.set_age()
-        self._occupation = "Bank Robber"
+        self._occupation = self.set_occupation()
         self._unique_attribute = self.set_unique_attribute()
         self._skills = {}
         self._characteristics_dict = {"Strength": None, "Constitution": None, "Size": None, "Dexterity": None, "Appearance": None, "Intelligence": None, "Power": None, "Education": None}
@@ -124,7 +124,7 @@ class NPC:
         """Set character occupation
         random between 0 and 131
         returns: occupation (STR)"""
-        occupation_index = randrange(0, len(attributes_list))
+        occupation_index = randrange(0, len(occupations_list))
         occupation = occupations_list[occupation_index]
 
         return occupation
@@ -231,5 +231,5 @@ class NPC:
             f.write(f"{key} : {self.get_skills()[key]}\n")
         f.close()
         print(f"Saved {self._name} as {self._name}-{self._occupation}-CoC-NPC.txt")
-        
+
 
