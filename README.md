@@ -1,4 +1,4 @@
-# random_npc_gen_call_of_cthulhu
+# random_npc_gen
 Generates a random basic npc for the Tabletop game, Call of Cthulhu (7e)
 
 All NPCs will have full characteristics, including Sanity and Luck, but not Movement. 
